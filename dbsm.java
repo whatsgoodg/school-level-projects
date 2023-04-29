@@ -173,7 +173,6 @@ public class Main {
         }
 
     }
-
     public static void insert_intials1(){
         String actors[] = {
                 "\'Marlon Brando\', \'1924.04.03\', \'2004.07.01\', \'Male\'",
@@ -317,5 +316,43 @@ public class Main {
             e.printStackTrace();
             return;
         }
+    }
+
+    static void award_insertion(){
+        String statements[] = { // ""가 있는 문자열 parsing 후 개수만큼 반복문으로 처리, 배우 이름(맨앞)과 년도(숫자) 필요.
+                "Marlon Brando won the \"Best Actor in a Leading Role\" award in 1973",
+                "Robert Duvall won the \"Best Supporting Actor\" award in 1980",
+                "The movie Francis Ford Coppola won the \"Best Direction\" award in 1980",
+                "James Cameron won the \"Best Director\" award in 1998 and 2010, \"Best Writing\" award in 2010",
+                "The movie Titanic won the \"Best Picture\" award in 1998",
+                "The movie Dunkirk won the \"Best Sound\" award in 2018",
+                "Leonardo DiCaprio won the \"Best Performance by an Actor in a Leading Role\" award in 2016"
+        };
+
+    }
+    static void rate_insert(){
+        String statements[] = { //공통: customer 이름 맨앞, 숫자
+                //공통되지 않는 것: 제목, 감독, 배우 성별, 장르, publisher 이름
+                "Jill rates 5 to \"Apocalypse Now\".",
+                "Bell rates 5 to the movies whose director is \"James Cameron\".",
+                "Bob rates 4 to the movies whose main actor is female.",
+                "Jack rates 4 to the Action movies.",
+                "John rates 5 to the movies produced by Paramount Pictures."
+        };
+    }
+    static void select_query(){
+        String statements[] = { //어떻게 parsing 을 해야되지?
+                "Select the names of the movies whose actor(s) is(are) dead.",
+                "Select the names of the directors who cast the same actor more than once,",
+                "Select the names of the movies and the genres, where movies have the common genre."
+        };
+    }
+    static void delete_query(){ //이거 parsing 이 말이 안 된다. 내가 이걸 어떻게 해?
+        String statements[] = {
+                "Delete the movies which were released before 2000.",
+                "Delete all customers and delete data from related tables.",
+                "Delete all tables and data."
+        };
+
     }
 }
